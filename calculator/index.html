@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+
+<style> 
+body{
+    display:block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("backgroundpic.png");
+    background-repeat: no-repeat;
+    background-size:cover ;
+    }  
+nav{
+    margin-bottom: 5px;
+    background-color: rgb(243, 168, 30);
+    overflow: hidden;
+    }
+
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.material-icons{
+    background-color:rgb(243, 168, 30) ;
+    float:right;
+    max-width: 50px;
+}
+.material-icons:hover{
+    background-color:rgb(163, 115, 26);
+}
+
+
+.main .bruhform{
+    width: auto;
+    height: auto;
+    position: relative;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.main .bruhform div{
+    width: 350px;
+    height: calc(450px/6);
+    display: flex;
+    flex: 1;
+}
+
+.main .bruhform div input{
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.numbers{
+    color: #ffffff;
+    background-color: #0880b7;
+}
+.numbers:hover{
+    background-color: #043145;
+}
+#airthematicoperations{
+    background-color: #18ad08;
+}
+#airthematicoperations:hover{
+    background-color: #107505;
+}
+.equalbtn{
+    background-color: rgb(198, 21, 198);
+    color: #fff;
+}
+.equalbtn:hover{
+    background-color: rgb(96, 4, 96);
+}
+
+</style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="bruhcompany" align="center"><h1>Calculator </h1> </div>
+    </nav>
+
+    <div class="main">
+        <form class="bruhform" name="cform">
+
+            <div class="display">
+                <input type="text" name="display" >
+                <input type="button" class="material-icons" name="delete" value=&#xe14a; onclick="Delete()">
+            </div>
+
+            <div class="buttons">
+                <input type="button" class="numbers" name="num7" value="7" onclick="valueButton(this);">
+                <input type="button" class="numbers" name="num8" value="8" onclick="valueButton(this);">
+                <input type="button" class="numbers" name="num9" value="9" onclick="valueButton(this);">
+                <input type="button" id="airthematicoperations" class="numbers" name="div" value="/" onclick="valueButton(this);">
+            </div>
+            <div class="buttons">
+                <input type="button" class="numbers" name="num4" value="4" onclick="valueButton(this);">
+                <input type="button" class="numbers" name="num5" value="5" onclick="valueButton(this);">
+                <input type="button" class="numbers" name="num6" value="6" onclick="valueButton(this);">
+                <input type="button" id="airthematicoperations" class="numbers" name="mul" value="*" onclick="valueButton(this);">
+            </div>
+            <div class="buttons">
+                <input type="button" class="numbers" name="num1" value="1" onclick="valueButton(this);">
+                <input type="button" class="numbers" name="num2" value="2" onclick="valueButton(this);">
+                <input type="button" class="numbers" name="num3" value="3" onclick="valueButton(this);">
+                <input type="button" id="airthematicoperations" class="numbers" name="sub" value="-" onclick="valueButton(this);">
+            </div>
+            <div class="buttons">
+                <input type="button" id="airthematicoperations" class="numbers" name="num0" value="0" onclick="valueButton(this);">
+                <input type="button" id="airthematicoperations" class="numbers" name="dot" value="." onclick="valueButton(this);">
+                <input type="button" id="airthematicoperations" class="numbers" name="plus" value="+" onclick="valueButton(this);">
+                <input type="button" class="equalbtn" name="equal" value="=" onclick="Calculate()">
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="script.js">
+            
+    </script>
+
+</body>
+</html>
